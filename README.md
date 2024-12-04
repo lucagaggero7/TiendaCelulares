@@ -1,4 +1,5 @@
 # Tienda de Celulares
+__Esta es la version Single Project de la tienda de celulares.__
 Este proyecto fue generado usando 
 - Angular CLI version 19.0.2 para el FrontEnd
 - ASP.NET Core Web Api version .NET 9 para el backend 
