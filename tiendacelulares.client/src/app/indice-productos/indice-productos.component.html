@@ -1,12 +1,19 @@
 <h2>Celulares</h2>
 
+
+@if (cargado)
+{
 <button mat-flat-button routerLink="/productos/crear">
   Crear nuevo celular
 </button>
 
+    @if (celulares.length === 0)
+    {
+<h4>No hay productos cargados</h4>
+    }
 
-@if (celulares)
-{
+    @else
+    {
 <table mat-table [dataSource]="celulares" class="mat-elevation-z8 indice-elementos">
   <ng-container matColumnDef="marca">
     <th mat-header-cell *matHeaderCellDef> Marca</th>
@@ -33,5 +40,10 @@
   <tr mat-header-row *matHeaderRowDef="columnasAMostrar"></tr>
   <tr mat-row *matRowDef="let row; columns: columnasAMostrar"></tr>
 </table>
+    }
+}
 
+@else
+{
+<h4>Cargando...</h4>
 }

@@ -16,20 +16,24 @@ import Swal from 'sweetalert2';
 export class IndiceProductosComponent {
 
   celularService = inject(CelularService);
-  celulares?: Celular[];
+  celulares: Celular[] = [];
   columnasAMostrar = ['marca', 'modelo', 'acciones']
+  cargado: boolean = false;
 
-  constructor() {
+  constructor()
+  {
     this.CargarProductos();
   }
 
-  CargarProductos() {
-    this.celularService.obtenerTodos().subscribe(celulares => {
+  CargarProductos(){
+    this.celularService.obtenerTodos().subscribe(celulares =>{
       this.celulares = celulares;
+      this.cargado = true;
     });
   }
 
-  borrar(id: number) {
+  borrar(id:number)
+  {
     this.celularService.borrar(id).subscribe(() => {
 
       Swal.fire("Confirmado", "El registro se borro con exito", 'success');
