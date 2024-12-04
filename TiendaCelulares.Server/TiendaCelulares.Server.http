@@ -1,0 +1,6 @@
+@TiendaCelulares.Server_HostAddress = http://localhost:5287
+
+GET {{TiendaCelulares.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,18 @@
+a{
+    margin-right: 1rem;
+}
+
+.indice-elementos{
+    margin-top: 1rem;
+}
+
+
+button.borrar {
+    background-color: crimson !important;
+    color: wheat;
+}
+
+a.editar {
+    background-color: blueviolet !important;
+    color: wheat;
+}

@@ -1,0 +1,13 @@
+a {
+    margin-left: 1rem;
+}
+
+mat-label {
+color: blueviolet;
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    color: black !important;
+}
+
+

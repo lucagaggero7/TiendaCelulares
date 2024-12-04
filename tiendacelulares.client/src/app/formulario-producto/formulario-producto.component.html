@@ -1,0 +1,26 @@
+<h2>{{titulo}}</h2>
+
+<form (submit)="GuardarCambios()" [formGroup]="form"> 
+
+    <div>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Marca</mat-label>
+            <input [formControl]="form.controls.marca" matInput/>
+          </mat-form-field>
+          
+    </div>
+
+    <div>
+    <mat-form-field appearance="outline">
+        <mat-label>Modelo</mat-label>
+        <input [formControl]="form.controls.modelo" matInput />
+    </mat-form-field>
+
+    </div>
+
+    <div>
+        <button type="submit" mat-flat-button>Guardar Cambios</button>
+        <a mat-raised-button routerLink="/productos">Cancelar</a>
+      </div>      
+</form>
